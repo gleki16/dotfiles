@@ -1,6 +1,6 @@
 ## 使用方法
 
-```
+```shell
 git clone --depth=1 https://gitlab.com/glek/dotfiles.git
 
 rsync -r dotfiles/.config ~
