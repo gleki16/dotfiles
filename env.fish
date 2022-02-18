@@ -36,7 +36,7 @@ abbr -Ua gst 'git status'
 # 其他
 abbr -Ua 1 'cd -'
 abbr -Ua gx 'sudo pacman -Syu'
-abbr -Ua h 'sudo btop'
+abbr -Ua h 'btm'
 abbr -Ua j 'lf'
 abbr -Ua la 'ls -a'
 abbr -Ua nm 'nmtui-connect'
