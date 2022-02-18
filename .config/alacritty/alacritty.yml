@@ -67,5 +67,5 @@ font:
     y: 0
 
 # 背景不透明度
-window.opacity: 0.8
-
+window:
+  opacity: 0.7
