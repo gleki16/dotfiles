@@ -37,8 +37,9 @@ interval = 1
 [[block]]
 block = "battery"
 interval = 10
-#driver = "upower"
 format = "{percentage} {time}"
+allow_missing = true
+hide_missing = true
 
 [[block]]
 block = "backlight"
