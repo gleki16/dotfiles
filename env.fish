@@ -14,7 +14,7 @@ set -Ux XMODIFIERS @im=fcitx
 set -Ux SDL_IM_MODULE fcitx
 
 # 默认编辑器
-set -Ux EDITOR nvim
+set -Ux EDITOR helix
 
 # 控制键替换大写锁定键
 set -Ux XKB_DEFAULT_OPTIONS ctrl:nocaps
@@ -44,4 +44,4 @@ abbr -Ua rs 'rsync'
 abbr -Ua s 'sudo'
 abbr -Ua sv 'sudo -e'
 abbr -Ua sj 'sudo lf'
-abbr -Ua v 'nvim'
+abbr -Ua v 'helix'
