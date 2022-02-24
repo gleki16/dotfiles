@@ -1,4 +1,3 @@
-
 theme = "native"
 icons = "awesome5"
 
@@ -53,5 +52,3 @@ block = "time"
 interval = 1
 format = "%a %F %T"
 locale = "zh_CN"
-
-
