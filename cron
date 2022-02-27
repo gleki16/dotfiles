@@ -1,5 +1,2 @@
-# 自动挂载 etc 目录
-@reboot fish -c 'transactional-update --etc-rw'
-
 # 自动更新系统
-@weekly fish -c 'transactional-update dup reboot'
+@weekly fish -c 'pacman -Syu; and reboot'
