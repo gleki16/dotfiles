@@ -16,9 +16,6 @@ set -Ux SDL_IM_MODULE fcitx
 # 默认编辑器
 set -Ux EDITOR helix
 
-# 控制键替换大写锁定键
-set -Ux XKB_DEFAULT_OPTIONS ctrl:nocaps
-
 # git 控制
 abbr -Ua g git
 abbr -Ua ga 'git add'
