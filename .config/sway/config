@@ -18,10 +18,7 @@ set $right l
 # 首选终端仿真器
 set $term alacritty
 # 首选应用启动器
-# 注意：将最终命令传递给swaymsg，以便可以在运行该命令的原始工作空间上打开结果窗口。
-#set $menu dmenu_path | dmenu | xargs swaymsg exec --
-#set $menu wofi --show=drun
-set $menu wldash
+set $menu fuzzel
 
 ### 输出配置
 # 随机壁纸
