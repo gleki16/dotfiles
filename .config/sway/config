@@ -27,8 +27,7 @@
     font pango:Ubuntu 13
 
 # 随机壁纸
-    set $wallpapers_path $HOME/a/pixra/bimple
-    output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+    exec_always setrandom $HOME/a/pixra/bimple
 
 ### 自启动
 #
@@ -204,25 +203,12 @@ bindsym $mod+o mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出"
 # 阅读 `man 5 sway-bar` ，了解有关此部分的更多信息。
 
 bar {
-    # 隐藏模式
+    swaybar_command waybar
+
+    position top
     mode hide
     hidden_state hide
     modifier $mod
-
-    # 顶部显示
-    position top
-
-    # 请记住，此配置文件的当前目录为 $HOME
-    status_command i3status-rs
-
-    # https://i3wm.org/docs/userguide.html#_colors
-    colors {
-        # 状态栏的文字颜色
-        statusline #ebdbb2
-
-        # 状态栏的背景色
-        background #000000
-    }
 }
 
 include /etc/sway/config.d/*
