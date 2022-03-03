@@ -29,6 +29,9 @@
 # 随机壁纸
     exec_always setrandom $HOME/a/pixra/bimple
 
+# 自动隐藏边框
+    smart_borders on
+
 ### 自启动
 #
 # 通知
