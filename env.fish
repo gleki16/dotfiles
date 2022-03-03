@@ -35,7 +35,7 @@ abbr -Ua gst 'git status'
 
 # 其他
 abbr -Ua 1 'cd -'
-abbr -Ua gx 'sudo pacman -Syu'
+abbr -Ua up 'sudo reflector @/etc/xdg/reflector/reflector.conf; and sudo pacman -Syu'
 abbr -Ua h 'btm'
 abbr -Ua j 'lf'
 abbr -Ua la 'ls -lah'
