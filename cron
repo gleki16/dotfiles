@@ -1,2 +1,2 @@
 # 自动更新系统
-@weekly fish -c 'reflector @/etc/xdg/reflector/reflector.conf; and pacman -Syu; and reboot'
+@weekly fish -c 'reflector @/etc/xdg/reflector/reflector.conf; and pacman -Syu --noconfirm; and reboot'
