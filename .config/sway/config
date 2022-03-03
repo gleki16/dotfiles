@@ -4,38 +4,48 @@
 #
 # 阅读 `man 5 sway` 以获取完整参考。
 
-font pango:Ubuntu 13
-
 ### 变数
 #
 # 超级键。Alt键为Mod1，Win键为Mod4。
-set $mod Mod4
-# 主行方向键，如vim
-set $left h
-set $down j
-set $up k
-set $right l
-# 首选终端仿真器
-set $term alacritty
-# 首选应用启动器
-set $menu fuzzel
+    set $mod Mod4
 
-### 输出配置
+# 主行方向键，如vim
+    set $left h
+    set $down j
+    set $up k
+    set $right l
+
+# 首选应用
+    set $term alacritty
+    set $menu fuzzel
+    set $browser firefox
+    set $vm virt-manager
+
+### 主题
+#
+# 字体
+    font pango:Ubuntu 13
+
 # 随机壁纸
-set $wallpapers_path $HOME/a/pixra/bimple
-output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+    set $wallpapers_path $HOME/a/pixra/bimple
+    output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+
+### 自启动
+#
+# 通知
+    exec mako --icons 1 --markup 1 --actions 1
+
+# 输入法
+    exec --no-startup-id fcitx5
 
 ### 空闲配置
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 330 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
+        timeout 300 'swaylock -f -c 000000' \
+        timeout 330 'swaymsg "output * dpms off"' \
+            resume 'swaymsg "output * dpms on"' \
+        before-sleep 'swaylock -f -c 000000'
 
 # 闲置300秒钟后，这将锁定屏幕，然后再30秒钟后关闭显示器，并在恢复后重新打开屏幕。它还可以在计算机进入睡眠状态之前锁定屏幕。
-
-### 自启
-# 输入法
-exec --no-startup-id fcitx5
 
 ### 输入配置
 input "type:keyboard" {
@@ -46,21 +56,22 @@ input "type:keyboard" {
 # 阅读 `man 5 sway-input` 以获取有关此部分的更多信息。
 
 ### 按键绑定
+#
 # 基本：
     # 启动终端
     bindsym $mod+Return exec $term
 
-    # 启动火狐
-    bindsym $mod+z exec firefox
+    # 启动启动器
+    bindsym $mod+d exec $menu
 
-    # 打开虚拟机
-    bindsym $mod+x exec virt-manager
+    # 启动浏览器
+    bindsym $mod+z exec $browser
+
+    # 启动虚拟机
+    bindsym $mod+x exec $vm
 
     # 关闭聚焦窗口
     bindsym $mod+q kill
-
-    # 启动启动器
-    bindsym $mod+d exec $menu
 
     # 按住$mod和鼠标左键拖动浮动窗口。
     # 用鼠标右键+$mod调整大小。
@@ -68,25 +79,29 @@ input "type:keyboard" {
     # 将 normal 改为 inverse ，以使用鼠标左键调整大小，并使用鼠标右键拖动。
     floating_modifier $mod normal
 
+    # 锁屏快捷键
+    bindsym $mod+s exec --no-startup-id swaylock -f -c 000000
+
     # 重新加载配置文件
     bindsym $mod+Shift+c reload
 
-    # 退出（退出您的Wayland会话）
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+# 调整音量
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-# 调整音量亮度
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessDown exec light -U 5
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym --locked XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# 调整亮度
+    bindsym XF86MonBrightnessDown exec light -U 5
+    bindsym XF86MonBrightnessUp exec light -A 5
+
+# 音乐播放
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
 
 # 屏幕截图
-bindsym --release Print exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T').jpg
+    bindsym --release Print exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T').jpg
 
 # 移动：
     # 转移焦点
@@ -97,13 +112,9 @@ bindsym --release Print exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T
 
     # 调整容器大小
     bindsym $mod+Left resize shrink width 10px
-    # 向左会缩小容器的宽度
     bindsym $mod+Down resize grow height 10px
-    # 向右会增加容器的宽度
     bindsym $mod+Up resize shrink height 10px
-    # 向上将收缩容器的高度
     bindsym $mod+Right resize grow width 10px
-    # 向下将增加容器的高度
 
     # 使用相同的方法移动焦点窗口，但添加Shift
     bindsym $mod+Shift+$left move left
@@ -170,7 +181,10 @@ bindsym --release Print exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T
     # 如果有多个暂存器窗口，则此命令会循环浏览它们。
     bindsym $mod+minus scratchpad show
 
+#
 # 电源管理
+#
+
 mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出" {
 
     bindsym j exec --no-startup-id systemctl poweroff, mode "default"
@@ -185,11 +199,10 @@ mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出" {
 }
 bindsym $mod+o mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出"
 
-# 锁屏快捷键
-bindsym $mod+s exec --no-startup-id swaylock -f -c 000000
-
 # 状态栏：
+#
 # 阅读 `man 5 sway-bar` ，了解有关此部分的更多信息。
+
 bar {
     # 隐藏模式
     mode hide
