@@ -40,10 +40,10 @@
 
 ### 空闲配置
 exec swayidle -w \
-        timeout 300 'swaylock -f -c 000000' \
+        timeout 300 'waylock --init-color 0x000000' \
         timeout 330 'swaymsg "output * dpms off"' \
             resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000'
+        before-sleep 'waylock --init-color 0x000000'
 
 # 闲置300秒钟后，这将锁定屏幕，然后再30秒钟后关闭显示器，并在恢复后重新打开屏幕。它还可以在计算机进入睡眠状态之前锁定屏幕。
 
@@ -80,7 +80,7 @@ input "type:keyboard" {
     floating_modifier $mod normal
 
     # 锁屏快捷键
-    bindsym $mod+s exec --no-startup-id swaylock -f -c 000000
+    bindsym $mod+s exec --no-startup-id waylock --init-color 0x000000
 
     # 重新加载配置文件
     bindsym $mod+Shift+c reload
@@ -191,7 +191,7 @@ mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出" {
     bindsym i exec --no-startup-id systemctl reboot, mode "default"
     bindsym g exec --no-startup-id systemctl suspend, mode "default"
     bindsym x exec --no-startup-id systemctl hibernate, mode "default"
-    bindsym s exec --no-startup-id swaylock -f -c 000000, mode "default"
+    bindsym s exec --no-startup-id waylock --init-color 0x000000, mode "default"
     bindsym d exec --no-startup-id swaymsg exit, mode "default"
 
     bindsym Return mode "default"
