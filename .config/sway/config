@@ -17,7 +17,7 @@
 
 # 首选应用
     set $term alacritty
-    set $menu wofi --allow-images --gtk-dark --show=drun
+    set $menu wofi --allow-images --gtk-dark --insensitive --show=drun
     set $browser firefox
     set $vm virt-manager
 
