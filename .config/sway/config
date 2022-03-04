@@ -218,11 +218,6 @@ bindsym $mod+o mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出"
 
 bar {
     swaybar_command waybar
-
-    position top
-    mode hide
-    hidden_state hide
-    modifier $mod
 }
 
 include /etc/sway/config.d/*
