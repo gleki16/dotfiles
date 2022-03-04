@@ -22,7 +22,7 @@
     set $vm virt-manager
 
 # 锁屏
-    set $locking waylock
+    set $locking waylock --init-color 0x000000 --input-color 0x00008b --fail-color 0x800000
 
 # 壁纸目录
     set $wallpaper_dir $HOME/a/pixra/bimple
