@@ -35,6 +35,9 @@
 # 随机壁纸
     exec_always setrandom $wallpaper_dir
 
+# 隐藏标题
+    default_border pixel 2
+
 # 自动隐藏边框
     smart_borders on
 
