@@ -6,10 +6,10 @@
 
 ### 变数
 #
-# 超级键。Alt键为Mod1，Win键为Mod4。
+# 超级键。Alt 键为 Mod1，Win 键为 Mod4。
     set $mod Mod4
 
-# 主行方向键，如vim
+# 主行方向键，如 vim
     set $left h
     set $down j
     set $up k
@@ -58,7 +58,7 @@ exec swayidle -w \
             resume 'swaymsg "output * dpms on"' \
         before-sleep 'exec $locking'
 
-# 闲置300秒钟后，这将锁定屏幕，然后再30秒钟后关闭显示器，并在恢复后重新打开屏幕。它还可以在计算机进入睡眠状态之前锁定屏幕。
+# 闲置 300 秒钟后，这将锁定屏幕，然后再 30 秒钟后关闭显示器，并在恢复后重新打开屏幕。它还可以在计算机进入睡眠状态之前锁定屏幕。
 
 ### 输入配置
 input "type:keyboard" {
@@ -71,6 +71,7 @@ input "type:keyboard" {
 ### 按键绑定
 #
 # 基本：
+#
     # 启动终端
     bindsym $mod+Return exec $term
 
@@ -86,8 +87,8 @@ input "type:keyboard" {
     # 关闭聚焦窗口
     bindsym $mod+q kill
 
-    # 按住$mod和鼠标左键拖动浮动窗口。
-    # 用鼠标右键+$mod调整大小。
+    # 按住 $mod 和鼠标左键拖动浮动窗口。
+    # 用鼠标右键 + $mod 调整大小。
     # 它也适用于非浮动窗口。
     # 将 normal 改为 inverse ，以使用鼠标左键调整大小，并使用鼠标右键拖动。
     floating_modifier $mod normal
@@ -116,7 +117,9 @@ input "type:keyboard" {
 # 屏幕截图
     bindsym --release Print exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T').jpg
 
+#
 # 移动：
+#
     # 转移焦点
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -129,13 +132,15 @@ input "type:keyboard" {
     bindsym $mod+Up resize shrink height 10px
     bindsym $mod+Right resize grow width 10px
 
-    # 使用相同的方法移动焦点窗口，但添加Shift
+    # 使用相同的方法移动焦点窗口，但添加 Shift
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
 
+#
 # 工作区：
+#
     # 切换到工作区
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -159,15 +164,16 @@ input "type:keyboard" {
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
     # 注意：工作空间可以具有您想要的任何名称，而不仅仅是数字。
-    # 我们只是使用1-10作为默认值。
+    # 我们只是使用 1-10 作为默认值。
 
+#
 # 布局内容：
+#
     # 您可以使用 $mod + b 或 $mod + v “拆分”焦点的当前对象，分别进行水平和垂直拆分。
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
     # 在不同的布局样式之间切换当前容器
-    #bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
@@ -183,8 +189,10 @@ input "type:keyboard" {
     # 将焦点移到父容器
     bindsym $mod+a focus parent
 
+#
 # 便笺：
-    # Sway有一个“便签本”，这是一个装窗口的袋子。
+#
+    # Sway 有一个“便签本”，这是一个装窗口的袋子。
     # 您可以将窗口发送到那里，稍后再取回。
 
     # 将当前聚焦的窗口移到暂存器
@@ -212,6 +220,7 @@ mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出" {
 }
 bindsym $mod+o mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出"
 
+#
 # 状态栏：
 #
 # 阅读 `man 5 sway-bar` ，了解有关此部分的更多信息。
