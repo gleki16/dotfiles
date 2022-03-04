@@ -25,7 +25,7 @@
     set $locking waylock --init-color 0x000000 --input-color 0x00008b --fail-color 0x800000
 
 # 壁纸目录
-    set $wallpaper_dir $HOME/a/pixra/bimple
+    set $wallpapers_dir $HOME/a/pixra/bimple
 
 ### 主题
 #
@@ -33,7 +33,7 @@
     font pango:Ubuntu 13
 
 # 随机壁纸
-    exec_always setrandom $wallpaper_dir
+    output * bg `find $wallpapers_dir -type f | shuf -n 1` fill
 
 # 隐藏标题
     default_border pixel 2
