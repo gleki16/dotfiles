@@ -207,7 +207,9 @@ input "type:keyboard" {
 # 电源管理
 #
 
-mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出" {
+set $mode_power "j关机，i重启，g挂起，x休眠，s锁屏，d登出"
+
+mode $mode_power {
 
     bindsym j exec --no-startup-id systemctl poweroff, mode "default"
     bindsym i exec --no-startup-id systemctl reboot, mode "default"
@@ -219,7 +221,8 @@ mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+o mode "j关机，i重启，g挂起，x休眠，s锁屏，d登出"
+
+bindsym $mod+o mode $mode_power
 
 #
 # 状态栏：
