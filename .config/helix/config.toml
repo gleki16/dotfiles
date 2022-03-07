@@ -1,1 +1,7 @@
 theme = "gruvbox"
+
+[editor]
+idle-timeout = 0
+
+[lsp]
+display-messages = true
