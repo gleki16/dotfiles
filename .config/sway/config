@@ -46,6 +46,9 @@
 # 通知
     exec mako --icons 1 --markup 1 --actions 1
 
+# 自动挂载助手
+    exec udiskie --tray
+
 # 输入法
     exec --no-startup-id fcitx5
 
