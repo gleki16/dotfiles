@@ -3,9 +3,6 @@
 # 移除欢迎语
 set -U fish_greeting ""
 
-# 让火狐用 wayland 协议
-set -Ux MOZ_ENABLE_WAYLAND 1
-
 # 语言设置
 set -Ux LANG zh_CN.UTF-8
 set -Ux LANGUAGE zh_CN:en_US
