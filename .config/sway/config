@@ -65,9 +65,13 @@ exec swayidle -w \
 # 闲置 300 秒钟后，这将锁定屏幕，然后再 5 秒钟后关闭显示器，并在恢复后重新打开屏幕。它还可以在计算机进入睡眠状态之前锁定屏幕。
 
 ### 输入配置
-input "type:keyboard" {
-    xkb_options caps:ctrl_modifier
-}
+#
+# 替换 caps，使用输入法时有问题，用环境变量代替：
+# set -Ux XKB_DEFAULT_OPTIONS ctrl:nocaps
+#
+#input "type:keyboard" {
+#    xkb_options caps:ctrl_modifier
+#}
 
 # 您可以通过运行以下命令获取输入的名称：swaymsg -t get_inputs
 # 阅读 `man 5 sway-input` 以获取有关此部分的更多信息。
