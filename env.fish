@@ -38,7 +38,7 @@ abbr -Ua gs  'git status'
 
 # 其他
 abbr -Ua 1   'cd -'
-abbr -Ua up  'sudo reflector @/etc/xdg/reflector/reflector.conf; and sudo pacman -Syu --noconfirm'
+abbr -Ua up  'sudo pacman -Syu'
 abbr -Ua fu  'fusermount -u'
 abbr -Ua h   'btm'
 abbr -Ua j   'lf'
