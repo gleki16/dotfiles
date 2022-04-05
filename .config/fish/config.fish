@@ -1,5 +1,5 @@
 # 如果登入没有图形显示，则启动 sway
-if test -z $DISPLAY -a (tty) = "/dev/tty1"
+if test -z "$DISPLAY" -a (tty) = "/dev/tty1"
 	exec sway
 else if status is-interactive
 	if test -n "$SSH_TTY" -a -z "$ZELLIJ"
