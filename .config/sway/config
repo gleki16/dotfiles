@@ -50,7 +50,7 @@
     exec udiskie --smart-tray
 
 # 输入法
-    exec --no-startup-id fcitx5
+    exec --no-startup-id fcitx5 -d
 
 ### 空闲配置
 exec swayidle -w \
