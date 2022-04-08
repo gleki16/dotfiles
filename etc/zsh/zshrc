@@ -1,0 +1,7 @@
+if test -z "$DISPLAY" -a "$(tty)" = "/dev/tty1"; then
+    exec sway
+elif test -n "$SSH_TTY" -a -z "$ZELLIJ"; then
+    exec zellij attach --create 0
+else
+    exec fish
+fi
