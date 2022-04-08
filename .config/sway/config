@@ -19,7 +19,8 @@
     set $term alacritty
     set $menu wofi --allow-images --gtk-dark --insensitive --show=drun
     set $browser firefox
-    set $vm virt-manager
+    set $ebook-reader foliate
+    set $virtual-machine virt-manager
 
 # 锁屏
     set $locking waylock --init-color 0x000000 --input-color 0x00008b --fail-color 0x800000
@@ -87,10 +88,13 @@ exec swayidle -w \
     bindsym $mod+d exec $menu
 
     # 启动浏览器
-    bindsym $mod+z exec $browser
+    bindsym $mod+u exec $browser
+
+    # 启动电子书
+    bindsym $mod+i exec $ebook-reader
 
     # 启动虚拟机
-    bindsym $mod+x exec $vm
+    bindsym $mod+m exec $virtual-machine
 
     # 关闭聚焦窗口
     bindsym $mod+q kill
