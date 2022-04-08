@@ -3,22 +3,6 @@
 # 移除欢迎语
 set -U fish_greeting ""
 
-# 语言设置
-set -Ux LANG zh_CN.UTF-8
-set -Ux LANGUAGE zh_CN:en_US
-set -Ux LC_CTYPE en_US.UTF-8
-#设定输入法
-set -Ux GTK_IM_MODULE fcitx
-set -Ux QT_IM_MODULE fcitx
-set -Ux XMODIFIERS @im=fcitx
-set -Ux SDL_IM_MODULE fcitx
-
-# 默认编辑器
-set -Ux EDITOR helix
-
-# 控制键替换大写锁定键
-set -Ux XKB_DEFAULT_OPTIONS ctrl:nocaps
-
 # git 控制
 abbr -Ua g   'git'
 abbr -Ua ga  'git add'
