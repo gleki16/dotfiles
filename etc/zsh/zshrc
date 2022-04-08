@@ -1,5 +1,7 @@
+# 如果登入没有图形显示，则启动 sway
 if test -z "$DISPLAY" -a "$(tty)" = "/dev/tty1"; then
     exec sway
+# 如果存在于 ssh 会话中，则启动复用器
 elif test -n "$SSH_TTY" -a -z "$ZELLIJ"; then
     exec zellij attach --create 0
 else
