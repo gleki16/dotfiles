@@ -88,10 +88,10 @@ exec swayidle -w \
     bindsym $mod+d exec $menu
 
     # 启动浏览器
-    bindsym $mod+u exec $browser
+    bindsym $mod+z exec $browser
 
     # 启动电子书
-    bindsym $mod+i exec $ebook-reader
+    bindsym $mod+x exec $ebook-reader
 
     # 启动虚拟机
     bindsym $mod+m exec $virtual-machine
