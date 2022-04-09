@@ -14,7 +14,7 @@ case "$file_type" in
     bat --color=always --style=plain --pager=never "$file"
     ;;
   application/zip | application/x-7z-compressed)
-    7z l "$file"
+    7z l -ba "$file"
     ;;
   *)
     echo "file type: $file_type"
