@@ -127,7 +127,7 @@ exec swayidle -w \
     bindsym XF86AudioPrev exec playerctl previous
 
 # 屏幕截图
-    bindsym --release Print exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T').jpg
+    bindsym $mod+p exec --no-startup-id grim -g "$(slurp)" ~/$(date +'%F_%T').jpg
 
 #
 # 移动：
