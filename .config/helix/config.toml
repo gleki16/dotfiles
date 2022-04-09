@@ -2,3 +2,11 @@ theme = "gruvbox"
 
 [editor]
 idle-timeout = 0
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+j = { k = "normal_mode" }
