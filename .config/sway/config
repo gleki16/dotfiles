@@ -67,12 +67,11 @@ exec swayidle -w \
 
 ### 输入配置
 #
-# 替换 caps，使用输入法时有问题，用环境变量代替：
-# set -Ux XKB_DEFAULT_OPTIONS ctrl:nocaps
+# 控制键替换大写锁定键：
 #
-#input "type:keyboard" {
-#    xkb_options caps:ctrl_modifier
-#}
+input "type:keyboard" {
+    xkb_options ctrl:nocaps
+}
 
 # 您可以通过运行以下命令获取输入的名称：swaymsg -t get_inputs
 # 阅读 `man 5 sway-input` 以获取有关此部分的更多信息。

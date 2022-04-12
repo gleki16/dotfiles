@@ -11,6 +11,3 @@ export SDL_IM_MODULE=fcitx
 
 # 默认编辑器
 export EDITOR=helix
-
-# 控制键替换大写锁定键
-export XKB_DEFAULT_OPTIONS=ctrl:nocaps
