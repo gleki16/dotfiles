@@ -61,12 +61,17 @@ exec swayidle -w \
         timeout 300 'light -G > /tmp/brightness && light -S 10' \
             resume 'light -S $([ -f /tmp/brightness ] && cat /tmp/brightness || echo 100%)' \
         timeout 330 'exec $locking' \
-        timeout 333 'swaymsg "output * dpms off"' \
+        timeout 330 'swaymsg "output * dpms off"' \
             resume 'swaymsg "output * dpms on"' \
+        timeout 10 'if pgrep -x waylock; then swaymsg "output * dpms off"; touch /tmp/dpmsoff; fi' \
+            resume 'if [ -f /tmp/dpmsoff ]; then swaymsg "output * dpms on"; rm /tmp/lcd; fi' \
         before-sleep 'playerctl pause' \
         before-sleep 'exec $locking'
 
-# 闲置 330 秒钟后，这将锁定屏幕，然后再 3 秒钟后关闭显示器，并在恢复后重新打开屏幕。它还可以在计算机进入睡眠状态之前锁定屏幕。
+# 闲置 300 秒钟后，降低亮度。在活动后恢复亮度。
+# 闲置 330 秒钟后，锁定屏幕并关闭显示器。在恢复后重新打开屏幕。
+# 闲置 10 秒钟后，如果屏幕已锁定，则关闭显示器。在恢复后重新打开屏幕。
+# 在计算机进入睡眠状态之前，暂停音乐并锁定屏幕。
 
 ### 输入配置
 #
