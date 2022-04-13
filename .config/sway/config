@@ -42,6 +42,9 @@
 # 自动隐藏边框
     smart_borders on
 
+# 重复工作区切换命令，将切换回之前的工作区
+    workspace_auto_back_and_forth yes
+
 ### 自启动
 #
 # 通知
