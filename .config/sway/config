@@ -16,7 +16,8 @@
     set $right l
 
 # 首选应用
-    set $term alacritty
+    # 避免输入法没有候选栏，所以用 x11
+    set $term WINIT_UNIX_BACKEND=x11 alacritty
     set $menu wofi --allow-images --gtk-dark --insensitive --show=drun
     set $browser firefox
     set $ebook-reader foliate
