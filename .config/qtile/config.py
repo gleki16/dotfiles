@@ -80,6 +80,8 @@ keys = [
 
 # power mode
     KeyChord([mod], "o", [
+        Key([], "Return", lazy.ungrab_chord()),
+        Key([], "space", lazy.ungrab_chord()),
         Key([], "d", lazy.shutdown(), lazy.ungrab_chord()),
         Key([], "g", lazy.spawn("slock"), lazy.spawn("systemctl suspend"), lazy.ungrab_chord()),
         Key([], "i", lazy.spawn("systemctl reboot"), lazy.ungrab_chord()),
