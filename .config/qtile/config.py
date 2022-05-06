@@ -124,7 +124,6 @@ for i in groups:
 layouts = [
     layout.Max(),
     layout.Bsp(),
-    layout.Zoomy(),
 ]
 
 widget_defaults = dict(
