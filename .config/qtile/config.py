@@ -27,9 +27,10 @@ keys = [
     Key([mod, "shift"], "r", lazy.restart()),
 
 # layout
-    Key([mod], "n", lazy.layout.normalize()),
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod], "space", lazy.next_layout()),
+    Key([mod, "shift"], "Return", lazy.layout.toggle_split()),
+    Key([mod], "n", lazy.layout.normalize()),
 
 # change focus
     Key([mod], "Up", lazy.layout.up()),
