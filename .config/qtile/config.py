@@ -13,6 +13,7 @@ locker = "slock"
 menu = "rofi -show drun"
 browser = "firefox"
 reader = "foliate"
+screenshot = "flameshot gui"
 virt = "virt-manager"
 
 keys = [
@@ -105,6 +106,7 @@ keys = [
 # app
     Key([mod], "d", lazy.spawn(menu)),
     Key([mod], "m", lazy.spawn(virt)),
+    Key([mod], "p", lazy.spawn(screenshot)),
     Key([mod], "x", lazy.spawn(reader)),
     Key([mod], "z", lazy.spawn(browser)),
 ]
