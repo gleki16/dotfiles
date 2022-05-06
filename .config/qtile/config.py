@@ -88,7 +88,7 @@ keys = [
         Key([], "g", lazy.spawn("slock"), lazy.spawn("systemctl suspend"), lazy.ungrab_chord()),
         Key([], "i", lazy.spawn("systemctl reboot"), lazy.ungrab_chord()),
         Key([], "j", lazy.spawn("systemctl poweroff"), lazy.ungrab_chord())],
-        mode="d登出，g挂起，i重启，j关机"
+        mode="d 登出, g 挂起, i 重启, j 关机"
     ),
 
 # function keys
