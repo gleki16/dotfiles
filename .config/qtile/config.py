@@ -144,7 +144,6 @@ widgets_list = [
     widget.Chord(),
     widget.DF(),
     widget.PulseVolume(),
-    widget.Battery(),
     widget.Systray(),
     widget.Clock(format="%D %a %R"),
 ]
