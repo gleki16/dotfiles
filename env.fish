@@ -4,7 +4,7 @@
 set -U fish_greeting ""
 
 # git 控制
-abbr -Ua g   'tig'
+abbr -Ua g   'gitui'
 abbr -Ua ga  'git add'
 abbr -Ua gaa 'git add --all'
 abbr -Ua gb  'git branch'
