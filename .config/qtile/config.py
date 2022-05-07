@@ -85,7 +85,7 @@ keys = [
         Key([], "Return", lazy.ungrab_chord()),
         Key([], "space", lazy.ungrab_chord()),
         Key([], "d", lazy.shutdown(), lazy.ungrab_chord()),
-        Key([], "g", lazy.spawn("slock"), lazy.spawn("systemctl suspend"), lazy.ungrab_chord()),
+        Key([], "g", lazy.spawn(locker), lazy.spawn("systemctl suspend"), lazy.ungrab_chord()),
         Key([], "i", lazy.spawn("systemctl reboot"), lazy.ungrab_chord()),
         Key([], "j", lazy.spawn("systemctl poweroff"), lazy.ungrab_chord())],
         mode="d 登出, g 挂起, i 重启, j 关机"
