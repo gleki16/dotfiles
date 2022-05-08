@@ -14,4 +14,4 @@ export EDITOR=helix
 
 # 默认主题
 export GTK_THEME=Adwaita:dark
-export QT_STYLE_OVERRIDE=adwaita
+export QT_STYLE_OVERRIDE=adwaita:dark
