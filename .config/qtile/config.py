@@ -139,7 +139,7 @@ extension_defaults = widget_defaults.copy()
 widgets_list = [
     widget.GroupBox(disable_drag=True, hide_unused=True),
     widget.CurrentLayoutIcon(),
-    widget.TaskList(padding_y=0, margin_y=0),
+    widget.WindowTabs(),
 
     widget.Chord(),
     widget.DF(),
