@@ -13,5 +13,5 @@ export SDL_IM_MODULE=fcitx
 export EDITOR=helix
 
 # 默认主题
-export GTK_THEME=Adwaita:dark
-export QT_STYLE_OVERRIDE=Adwaita-Dark
+#export GTK_THEME=Adwaita:dark
+#export QT_STYLE_OVERRIDE=Adwaita-Dark

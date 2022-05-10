@@ -148,7 +148,7 @@ widgets_list = [
     widget.Clock(format="%D %a %R"),
 ]
 
-screens = [Screen(top=bar.Bar(widgets_list, 24, opacity=0.8))]
+screens = [Screen(top=bar.Bar(widgets_list, 24))]
 
 # drag floating layouts.
 mouse = [
