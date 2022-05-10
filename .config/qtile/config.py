@@ -9,10 +9,7 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = guess_terminal()
 
-background="fbf1c7"
-foreground="3c3836"
-
-locker = "i3lock --color " + background
+locker = "i3lock"
 menu = "rofi -show drun"
 browser = "firefox"
 reader = "foliate"
@@ -136,14 +133,12 @@ widget_defaults = dict(
     font="Ubuntu",
     fontsize=16,
     padding=5,
-    background=background,
-    foreground=foreground,
 )
 extension_defaults = widget_defaults.copy()
 
 widgets_list = [
-    widget.GroupBox(background="", foreground="", disable_drag=True, hide_unused=True, highlight_method="line"),
-    widget.CurrentLayoutIcon(background="", foreground=""),
+    widget.GroupBox(disable_drag=True, hide_unused=True, highlight_method="line"),
+    widget.CurrentLayoutIcon(),
     widget.WindowTabs(selected=("<u>", "</u>")),
 
     widget.Chord(),
