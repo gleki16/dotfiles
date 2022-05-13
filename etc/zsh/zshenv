@@ -10,7 +10,7 @@ export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 
 # 默认编辑器
-export EDITOR=helix
+export EDITOR=emacs
 
 # 默认主题
 #export GTK_THEME=Adwaita:dark
