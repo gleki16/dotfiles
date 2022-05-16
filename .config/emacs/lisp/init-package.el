@@ -1,5 +1,4 @@
 ;; 添加软件源
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
@@ -7,7 +6,6 @@
   (package-initialize))
 
 ;; 安装 use-package
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
