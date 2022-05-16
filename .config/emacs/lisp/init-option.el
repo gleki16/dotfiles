@@ -17,6 +17,10 @@
 
 (xterm-mouse-mode 1)
 
+;; 5 秒闲置，自动保存
+
+(auto-save-visited-mode 1)
+
 ;; 简化是/否提示
 
 (fset 'yes-or-no-p 'y-or-n-p)
