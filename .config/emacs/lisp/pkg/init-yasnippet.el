@@ -1,5 +1,7 @@
 (use-package yasnippet
-  :hook (prog-mode . yas-minor-mode))
+  :config
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook #'yas-minor-mode))
 
 (use-package yasnippet-snippets)
 

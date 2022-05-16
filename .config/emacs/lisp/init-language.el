@@ -5,6 +5,6 @@
 (require 'init-flymake)
 
 ;; 代码片段
-;(require 'init-yasnippet)
+(require 'init-yasnippet)
 
 (provide 'init-language)
