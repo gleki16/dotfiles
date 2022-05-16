@@ -1,46 +1,43 @@
-;;; init-options.el --- 设置选项  -*- lexical-binding: t -*-
-;;; Commentary:
+;; 提升垃圾收集阈值，加快启动速度，启动后降低阈值，避免卡顿
 
-;;; Code:
+(setq gc-cons-threshold most-positive-fixnum)
+(add-hook 'after-init-hook #'(lambda () (setq gc-cons-threshold (* 1024 1024))))
+
+;; 使用 UTF-8
+
+(prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
+
+;; 显示相对行号
 
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
 
-;; Feature Mode
+;; 启用鼠标
+
+(xterm-mouse-mode 1)
+
+;; 简化是/否提示
 
 (fset 'yes-or-no-p 'y-or-n-p)
+
+;; 禁用菜单栏
+
+(menu-bar-mode -1)
+
+;; 禁用启动画面
+
+(setq inhibit-splash-screen t)
+(setq initial-scratch-message nil)
+
+;; 禁用光标闪烁
+
 (setq visible-cursor nil)
 
-;; File Operation
+;; 禁用备份文件和锁定文件
 
-(setq inhibit-splash-screen t
-      initial-scratch-message nil
-      sentence-end-double-space nil
+(setq auto-save-default nil
       make-backup-files nil
-      auto-save-default nil
       create-lockfiles nil)
 
-;; Performance
-
-(if (not (display-graphic-p))
-    (progn
-      ;; 增大垃圾回收的阈值，提高整体性能（内存换效率）
-      (setq gc-cons-threshold (* 8192 8192))
-      ;; 增大同LSP服务器交互时的读取文件的大小
-      (setq read-process-output-max (* 1024 1024 128)) ;; 128MB
-      ))
-
-;; Titlebar
-
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
-
-(let ((display-table (or standard-display-table (make-display-table))))
-  (set-display-table-slot display-table 'vertical-border (make-glyph-code ?│)) ; or ┃ │
-  (setq standard-display-table display-table))
-(set-face-background 'vertical-border (face-background 'default))
-(set-face-foreground 'vertical-border "grey")
-
-
 (provide 'init-option)
-;;; init-options.el ends here

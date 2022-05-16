@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-;; 设定源码加载路径 
+;; 设定源码加载路径
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/pkg" user-emacs-directory))
@@ -20,8 +20,7 @@
 (require 'init-theme)
 (require 'init-modal-edit)
 (require 'init-completion)
-(require 'init-lang)
-
+(require 'init-language)
 
 (provide 'init)
 ;;; init.el ends here
