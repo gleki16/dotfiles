@@ -4,6 +4,6 @@
   (company-minimum-prefix-length 2)
   (company-show-quick-access t)
   :config
-  (global-company-mode))
+  (global-company-mode 1))
 
 (provide 'init-company)
