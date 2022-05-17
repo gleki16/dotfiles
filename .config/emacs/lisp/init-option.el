@@ -26,6 +26,9 @@
 ;; 简化是/否提示
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; 括号自动配对
+(add-hook 'prog-mode-hook 'electric-pair-local-mode)
+
 ;; 禁用菜单栏
 (menu-bar-mode -1)
 
