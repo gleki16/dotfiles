@@ -14,7 +14,7 @@
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
 
-;; 不要自动换行
+;; 取消自动折行
 (set-default 'truncate-lines t)
 
 ;; 启用鼠标
