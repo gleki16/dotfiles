@@ -38,6 +38,7 @@
       make-backup-files nil
       create-lockfiles nil)
 
+;; 图形界面禁用工具栏和滚动条
 (when (display-graphic-p)
   (scroll-bar-mode -1)
   (tool-bar-mode -1))
