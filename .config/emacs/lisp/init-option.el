@@ -38,8 +38,9 @@
       make-backup-files nil
       create-lockfiles nil)
 
-;; 图形界面禁用工具栏和滚动条
+;; 图形界面禁用：光标闪烁，滚动条，工具栏
 (when (display-graphic-p)
+  (blink-cursor-mode 0)
   (scroll-bar-mode -1)
   (tool-bar-mode -1))
 
