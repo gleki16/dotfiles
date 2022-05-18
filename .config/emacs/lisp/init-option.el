@@ -20,17 +20,17 @@
 ;; 5 秒闲置，自动保存
 (auto-save-visited-mode 1)
 
-;; 简化是/否提示
+;; 在询问是或否时使用简短的回答
 (fset 'yes-or-no-p 'y-or-n-p)
-
-;; 括号自动配对
-(add-hook 'prog-mode-hook 'electric-pair-local-mode)
 
 ;; 禁用菜单栏
 (menu-bar-mode -1)
 
 ;; 设置默认值
 (setq-default
+
+ ;; 禁用响铃
+ ring-bell-function 'ignore
 
  ;; 取消自动折行
  truncate-lines t
@@ -46,6 +46,12 @@
  auto-save-default nil
  make-backup-files nil
  create-lockfiles nil)
+
+;; 括号自动配对
+(add-hook 'prog-mode-hook 'electric-pair-local-mode)
+
+;; 删除尾随空格
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; 图形界面：
 ;; 禁用：光标闪烁，滚动条，工具栏
