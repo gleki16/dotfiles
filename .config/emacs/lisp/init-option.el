@@ -14,6 +14,9 @@
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
 
+;; 突出显示当前行
+(global-hl-line-mode t)
+
 ;; 启用鼠标
 (xterm-mouse-mode 1)
 
