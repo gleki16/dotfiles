@@ -11,12 +11,6 @@
   (company-tooltip-align-annotations t)
 
   ;; 后端列表
-  (company-backends '((;; completion-at-point-functions
-		       company-capf
-		       company-dabbrev-code
-		       company-files
-		       company-keywords
-		       company-semantic
-		       company-yasnippet))))
+  (company-backends '((company-capf :with company-yasnippet))))
 
 (provide 'init-company)
