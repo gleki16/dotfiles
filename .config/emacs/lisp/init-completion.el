@@ -4,11 +4,8 @@
 ;; 显示键绑定
 (require 'init-which-key)
 
-;; 模糊匹配
-(require 'init-flx)
-
-;; 通用补全
-(require 'init-ivy)
+;; 命令缓冲区补全
+(require 'init-selectrum)
 
 ;; 插入模式补全
 (require 'init-company)

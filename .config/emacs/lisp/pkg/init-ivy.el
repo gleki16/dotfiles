@@ -8,6 +8,7 @@
   ("C-x C-f" . 'counsel-fzf))
 
 ;; 使用模糊搜索
+(require 'init-flx)
 (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy))
       ivy-initial-inputs-alist nil)
 
