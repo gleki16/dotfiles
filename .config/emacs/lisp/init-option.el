@@ -49,6 +49,7 @@
 
 ;; 括号自动配对
 (add-hook 'prog-mode-hook 'electric-pair-local-mode)
+(add-hook 'conf-mode-hook 'electric-pair-local-mode)
 
 ;; 删除尾随空格
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
