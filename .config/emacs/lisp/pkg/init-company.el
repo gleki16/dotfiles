@@ -10,7 +10,13 @@
   ;; 注释右侧对齐
   (company-tooltip-align-annotations t)
 
-  ;; 后端使用 capf 和 代码片段
-  (company-backends '((company-capf :with company-yasnippet))))
+  ;; 后端列表
+  (company-backends '((;; completion-at-point-functions
+		       company-capf
+		       company-dabbrev-code
+		       company-files
+		       company-keywords
+		       company-semantic
+		       company-yasnippet))))
 
 (provide 'init-company)
