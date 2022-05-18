@@ -1,10 +1,10 @@
 ;; 提升垃圾收集阈值，减少垃圾收集的频率来加快启动速度
 (setq gc-cons-threshold most-positive-fixnum)
 
-;; 降低垃圾收集阈值使垃圾收集暂停更快，减少卡顿
+;; 启动后，降低垃圾收集阈值使垃圾收集暂停更快，减少卡顿
 (add-hook 'emacs-startup-hook
           (lambda ()
-            (setq gc-cons-threshold (expt 2 23))))
+            (setq gc-cons-threshold (* 16 1024 1024))))
 
 ;; 使用 UTF-8
 (prefer-coding-system 'utf-8)
