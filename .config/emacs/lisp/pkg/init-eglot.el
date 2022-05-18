@@ -1,4 +1,4 @@
 (use-package eglot
-  :hook (prog-mode . eglot-ensure))
+  :hook (yas-minor-mode . eglot-ensure))
 
 (provide 'init-eglot)

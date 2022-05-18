@@ -87,6 +87,7 @@
 (use-package meow
   :config
   (meow-setup)
+  (meow-setup-indicator)
   (meow-global-mode 1))
 
 (provide 'init-meow)
