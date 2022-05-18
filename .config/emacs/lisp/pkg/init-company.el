@@ -3,19 +3,14 @@
   :custom
   (company-idle-delay 0)
   (company-minimum-prefix-length 2)
-  (company-show-quick-access t)
-  (company-require-match nil)
-  (company-tooltip-align-annotations t)
-  :config
-  (company-tng-configure-default t))
 
-(use-package company-fuzzy
-  :hook (company-mode . company-fuzzy-mode)
-  :custom
-  (company-fuzzy-sorting-backend 'flx)
-  (company-fuzzy-prefix-on-top nil)
-  (company-fuzzy-trigger-symbols '("." "->" "<" "\"" "'" "@"))
-  :config
-  (add-to-list 'company-fuzzy-history-backends 'company-yasnippet))
+  ;; 用 Meta + 数字，快速选择候选
+  (company-show-quick-access t)
+
+  ;; 注释右侧对齐
+  (company-tooltip-align-annotations t)
+
+  ;; 后端使用 capf 和 代码片段
+  (company-backends '((company-capf :with company-yasnippet))))
 
 (provide 'init-company)
