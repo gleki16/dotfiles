@@ -14,9 +14,6 @@
 (global-display-line-numbers-mode 1)
 (setq display-line-numbers-type 'relative)
 
-;; 取消自动折行
-(set-default 'truncate-lines t)
-
 ;; 启用鼠标
 (xterm-mouse-mode 1)
 
@@ -32,17 +29,23 @@
 ;; 禁用菜单栏
 (menu-bar-mode -1)
 
-;; 禁用启动画面
-(setq inhibit-splash-screen t)
-(setq initial-scratch-message nil)
+;; 设置默认值
+(setq-default
 
-;; 禁用光标闪烁
-(setq visible-cursor nil)
+ ;; 取消自动折行
+ truncate-lines t
 
-;; 禁用备份文件和锁定文件
-(setq auto-save-default nil
-      make-backup-files nil
-      create-lockfiles nil)
+ ;; 禁用启动画面
+ inhibit-splash-screen t
+ initial-scratch-message nil
+
+ ;; 禁用光标闪烁
+ visible-cursor nil
+
+ ;; 禁用备份文件和锁定文件
+ auto-save-default nil
+ make-backup-files nil
+ create-lockfiles nil)
 
 ;; 图形界面：
 ;; 禁用：光标闪烁，滚动条，工具栏
