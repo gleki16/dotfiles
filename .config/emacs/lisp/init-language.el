@@ -7,6 +7,9 @@
 ;; 代码片段
 (require 'init-yasnippet)
 
+;; org 模式
+(require 'init-org)
+
 ;; 语言包
 (use-package rust-mode)
 
