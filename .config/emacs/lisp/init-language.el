@@ -7,4 +7,7 @@
 ;; 代码片段
 (require 'init-yasnippet)
 
+;; 语言包
+(use-package rust-mode)
+
 (provide 'init-language)

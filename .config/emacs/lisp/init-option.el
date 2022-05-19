@@ -57,11 +57,8 @@
 ;; 删除尾随空格
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; 图形界面：
-;; 禁用：光标闪烁，滚动条，工具栏
+;; 图形界面
 (when (display-graphic-p)
-  (blink-cursor-mode -1)
-  (scroll-bar-mode -1)
-  (tool-bar-mode -1))
+  (require 'init-graphic))
 
 (provide 'init-option)
