@@ -9,7 +9,9 @@ from libqtile.utils import guess_terminal
 mod = "mod4"
 terminal = guess_terminal()
 
-locker = "i3lock"
+background="fbf1c7"
+
+locker = "i3lock --color " + background
 menu = "rofi -show drun"
 browser = "firefox"
 reader = "foliate"
