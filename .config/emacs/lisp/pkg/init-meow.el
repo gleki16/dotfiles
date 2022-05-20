@@ -93,14 +93,14 @@
 ;; 领导键映射
 (use-package meow
   :bind (:map mode-specific-map
-	      ("e" . "C-x C-e")
-	      ("s" . split-window-right)
-	      ("v" . split-window-below)
-	      ("w" . other-window)
-	      ("i" . imenu)
-	      ("b" . switch-to-buffer)
-	      ("o" . delete-other-windows)
-	      ("k" . kill-current-buffer)
-	      ("u" . meow-universal-argument)))
+              ("e" . "C-x C-e")
+              ("s" . split-window-right)
+              ("v" . split-window-below)
+              ("w" . other-window)
+              ("i" . imenu)
+              ("b" . switch-to-buffer)
+              ("o" . delete-other-windows)
+              ("k" . kill-current-buffer)
+              ("u" . meow-universal-argument)))
 
 (provide 'init-meow)
