@@ -42,6 +42,9 @@
  inhibit-splash-screen t
  initial-scratch-message nil
 
+ ;; 使用空格代替制表符
+ indent-tabs-mode nil
+
  ;; 禁用光标闪烁
  visible-cursor nil
 
