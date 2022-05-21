@@ -1,5 +1,6 @@
 ;; 语言服务器客户端
 (require 'init-eglot)
+(require 'init-lsp-mode)
 
 ;; 语法检查
 (require 'init-flymake)
