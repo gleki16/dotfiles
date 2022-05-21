@@ -1,6 +1,5 @@
 (use-package yasnippet
-  :hook (prog-mode . yas-minor-mode)
-  :config (yas-reload-all))
+  :config (yas-global-mode 1))
 
 (use-package yasnippet-snippets)
 
