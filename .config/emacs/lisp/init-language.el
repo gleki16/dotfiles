@@ -1,3 +1,6 @@
+;; 语言翻译
+(require 'init-go-translate)
+
 ;; 语言服务器客户端
 (require 'init-eglot)
 (require 'init-lsp-mode)
