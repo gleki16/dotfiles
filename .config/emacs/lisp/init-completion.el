@@ -13,7 +13,4 @@
 ;; 全局搜索补全
 (require 'init-consult)
 
-;; 文本搜索
-(require 'init-rg)
-
 (provide 'init-completion)
