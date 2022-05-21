@@ -48,6 +48,12 @@
  ;; 禁用光标闪烁
  visible-cursor nil
 
+ ;; 不要显示多行 eldoc
+ eldoc-echo-area-use-multiline-p nil
+
+ ;; 鼠标粘贴在光标处
+ mouse-yank-at-point t
+
  ;; 禁用备份文件和锁定文件
  auto-save-default nil
  make-backup-files nil
