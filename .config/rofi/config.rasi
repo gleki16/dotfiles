@@ -1,0 +1,5 @@
+configuration {
+    modi: "drun";
+    font: "Ubuntu 15";
+    show-icons: true;
+}
