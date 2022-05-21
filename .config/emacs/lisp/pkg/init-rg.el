@@ -1,4 +1,3 @@
-(use-package rg
-  :config (rg-enable-default-bindings))
+(use-package rg)
 
 (provide 'init-rg)

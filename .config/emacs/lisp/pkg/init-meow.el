@@ -93,9 +93,10 @@
 ;; 领导键映射
 (use-package meow
   :bind (:map mode-specific-map
+              ("p" . project-prefix-map)
               ("e" . "C-x C-e")
-              ("s" . split-window-right)
-              ("v" . split-window-below)
+              ("v" . split-window-right)
+              ("s" . split-window-below)
               ("w" . other-window)
               ("i" . imenu)
               ("b" . switch-to-buffer)
