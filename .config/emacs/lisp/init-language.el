@@ -1,9 +1,13 @@
 ;; 语言翻译
 (require 'init-go-translate)
 
-;; 语言服务器客户端
+;; 语言客户端
 (require 'init-eglot)
-(require 'init-lsp-mode)
+
+;; 调试客户端
+;(require 'init-lsp-mode)
+;(require 'init-dap-mode)
+;(require 'dap-python)
 
 ;; 语法检查
 (require 'init-flymake)
