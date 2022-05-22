@@ -4,11 +4,6 @@
 ;; 语言客户端
 (require 'init-eglot)
 
-;; 调试客户端
-;(require 'init-lsp-mode)
-;(require 'init-dap-mode)
-;(require 'dap-python)
-
 ;; 语法检查
 (require 'init-flymake)
 
