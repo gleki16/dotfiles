@@ -13,6 +13,9 @@
 ;; org 模式
 (require 'init-org)
 
+;; 快速运行缓冲区
+(require 'init-quickrun)
+
 ;; 语言包
 (use-package rust-mode)
 

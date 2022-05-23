@@ -5,7 +5,7 @@
    '("k" . meow-prev)
    '("<escape>" . ignore))
 
-  ;; 领导键映射
+  ;; 领导键映射，包括 mode-specific-map
   (meow-leader-define-key
    ;; high frequency keybindings
    '("e" . "C-x C-e")
@@ -16,7 +16,6 @@
    '("b" . switch-to-buffer)
    '("o" . delete-other-windows)
    '("u" . meow-universal-argument)
-   '("t" . gts-do-translate)
 
    ;; Use SPC (0-9) for digit arguments.
    '("1" . meow-digit-argument)
