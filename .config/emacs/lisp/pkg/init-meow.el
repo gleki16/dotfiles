@@ -15,7 +15,6 @@
    '("i" . imenu)
    '("b" . switch-to-buffer)
    '("o" . delete-other-windows)
-   '("k" . kill-current-buffer)
    '("u" . meow-universal-argument)
    '("t" . gts-do-translate)
 
