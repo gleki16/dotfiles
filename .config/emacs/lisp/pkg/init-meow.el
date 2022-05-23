@@ -4,7 +4,20 @@
    '("j" . meow-next)
    '("k" . meow-prev)
    '("<escape>" . ignore))
+
+  ;; 领导键映射
   (meow-leader-define-key
+   ;; high frequency keybindings
+   '("e" . "C-x C-e")
+   '("s" . split-window-right)
+   '("v" . split-window-below)
+   '("w" . other-window)
+   '("i" . imenu)
+   '("b" . switch-to-buffer)
+   '("o" . delete-other-windows)
+   '("k" . kill-current-buffer)
+   '("u" . meow-universal-argument)
+   '("t" . gts-do-translate)
    ;; SPC j/k will run the original command in MOTION state.
    '("j" . "H-j")
    '("k" . "H-k")
@@ -21,6 +34,7 @@
    '("0" . meow-digit-argument)
    '("/" . meow-keypad-describe-key)
    '("?" . meow-cheatsheet))
+
   (meow-normal-define-key
    '("0" . meow-expand-0)
    '("9" . meow-expand-9)
@@ -89,19 +103,5 @@
   (meow-setup)
   (meow-setup-indicator)
   (meow-global-mode 1))
-
-;; 领导键映射
-(use-package meow
-  :bind (:map mode-specific-map
-              ("p" . project-prefix-map)
-              ("e" . "C-x C-e")
-              ("v" . split-window-right)
-              ("s" . split-window-below)
-              ("w" . other-window)
-              ("i" . imenu)
-              ("b" . switch-to-buffer)
-              ("o" . delete-other-windows)
-              ("k" . kill-current-buffer)
-              ("u" . meow-universal-argument)))
 
 (provide 'init-meow)
