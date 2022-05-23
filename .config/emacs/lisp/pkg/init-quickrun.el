@@ -1,5 +1,5 @@
 (use-package quickrun
   :bind (:map mode-specific-map
-              ("r" . quickrun-shell)))
+              ("r" . quickrun)))
 
 (provide 'init-quickrun)
