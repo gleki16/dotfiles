@@ -10,10 +10,8 @@ mod = "mod4"
 terminal = guess_terminal()
 
 color = [
-    'fbf1c7',
-    'd5c4a1',
-    '3c3836',
-    '928374',
+    'fbf1c7', 'ebdbb2',         # background color
+    '3c3836', '7c6f64',         # foreground color
 ]
 
 locker = "i3lock --color " + color[0]
