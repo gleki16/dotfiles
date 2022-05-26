@@ -10,6 +10,7 @@ mod = "mod4"
 terminal = guess_terminal()
 
 background="fbf1c7"
+foreground="3c3836"
 
 locker = "i3lock --color " + background
 menu = "rofi -show drun"
@@ -135,12 +136,14 @@ widget_defaults = dict(
     font="Ubuntu",
     fontsize=16,
     padding=5,
+    background=background,
+    foreground=foreground,
 )
 extension_defaults = widget_defaults.copy()
 
 widgets_list = [
-    widget.GroupBox(disable_drag=True, hide_unused=True),
-    widget.CurrentLayoutIcon(),
+    widget.GroupBox(active='008000', disable_drag=True, hide_unused=True),
+    widget.CurrentLayout(),
     widget.WindowTabs(),
 
     widget.Chord(),
