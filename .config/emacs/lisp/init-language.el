@@ -17,6 +17,6 @@
 (require 'init-quickrun)
 
 ;; 语言包
-(use-package rust-mode)
+(use-package markdown-mode)
 
 (provide 'init-language)
