@@ -1,4 +1,5 @@
 (use-package eglot
-  :hook (prog-mode . eglot-ensure))
+  :hook ((python-mode
+          sh-mode) . eglot-ensure))
 
 (provide 'init-eglot)

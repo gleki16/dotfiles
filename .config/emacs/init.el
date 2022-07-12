@@ -18,7 +18,7 @@
 (require 'init-option)
 (require 'init-package)
 (require 'init-theme)
-(require 'init-modal-edit)
+(require 'init-keymap)
 (require 'init-completion)
 (require 'init-language)
 
