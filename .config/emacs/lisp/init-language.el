@@ -18,5 +18,6 @@
 
 ;; 语言包
 (use-package markdown-mode)
+(use-package lua-mode)
 
 (provide 'init-language)
