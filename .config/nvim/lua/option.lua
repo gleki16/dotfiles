@@ -2,6 +2,8 @@ local options = {
    mouse = 'a',                 -- 允许使用鼠标
    scrolloff = 2,               -- 移动时光标上下保留2行
    sidescrolloff = 5,           -- 移动时光标左右保留5列
+   number = true,               -- 行号
+   relativenumber = true,       -- 相对行号
 }
 
 local function load_options()
