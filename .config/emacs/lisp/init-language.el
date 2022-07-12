@@ -8,7 +8,8 @@
 (require 'init-flymake)
 
 ;; 代码片段
-(require 'init-yasnippet)
+;; 加载太慢了，也没多大用，干脆不用了
+;; (require 'init-yasnippet)
 
 ;; org 模式
 (require 'init-org)
