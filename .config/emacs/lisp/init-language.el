@@ -1,6 +1,9 @@
 ;; 语言翻译
 (require 'init-go-translate)
 
+;; 语法树
+;; (require 'init-tree-sitter)
+
 ;; 语言客户端
 (require 'init-eglot)
 
