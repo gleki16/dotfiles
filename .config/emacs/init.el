@@ -5,7 +5,8 @@
 ;; 设定源码加载路径
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "lisp/pkg" user-emacs-directory))
-(setq custom-file (locate-user-emacs-file "custom.el")) ; 自定义信息文件位置
+;; 自定义信息文件位置
+(setq custom-file (locate-user-emacs-file "custom.el"))
 
 ;; 加载配置
 (require 'init-version)                 ; 检查版本
