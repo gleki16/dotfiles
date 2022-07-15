@@ -1,16 +1,11 @@
-;; 撤销树
-(require 'init-undo-tree)
+;;;; init-completion.el --- 补全
+;;; Commentary:
 
-;; 显示键绑定
-(require 'init-which-key)
-
-;; 命令缓冲区补全
-(require 'init-selectrum)
-
-;; 插入模式补全
-(require 'init-company)
-
-;; 全局搜索补全
-(require 'init-consult)
+(require 'init-undo-tree)               ; 撤销树
+(require 'init-which-key)               ; 显示按键绑定
+(require 'init-selectrum)               ; 命令缓冲区补全
+(require 'init-company)                 ; 插入模式补全
+(require 'init-consult)                 ; 全局搜索补全
 
 (provide 'init-completion)
+;;; init-completion.el ends here
