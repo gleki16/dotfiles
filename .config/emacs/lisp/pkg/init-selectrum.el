@@ -3,11 +3,7 @@
 
 (use-package selectrum-prescient
   :config
-
-  ;; 让排序和过滤更智能
-  (selectrum-prescient-mode 1)
-
-  ;; 历史记录排序
-  (prescient-persist-mode 1))
+  (selectrum-prescient-mode 1)          ; 让排序和过滤更智能
+  (prescient-persist-mode 1))           ; 历史记录排序
 
 (provide 'init-selectrum)

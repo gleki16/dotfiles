@@ -2,23 +2,14 @@
   :bind (:map mode-specific-map
                ("t" . gts-do-translate))
   :custom
-
-  ;; 翻译语言对
-  (gts-translate-list '(("en" "zh")))
-
+  (gts-translate-list '(("en" "zh")))   ; 翻译语言对
   :config
   (setq gts-default-translator
         (gts-translator
-
-         ;; 用于拾取初始文本
-         :picker (gts-noprompt-picker)
-
-         ;; 翻译引擎
-         :engines (list
+         :picker (gts-noprompt-picker)  ; 用于拾取初始文本
+         :engines (list                 ; 翻译引擎
                    (gts-bing-engine)
                    (gts-google-engine))
-
-         ;; 渲染器，用于输出结果到指定目标
-         :render (gts-buffer-render))))
+         :render (gts-buffer-render)))) ; 渲染器，用于输出结果到指定目标
 
 (provide 'init-go-translate)
