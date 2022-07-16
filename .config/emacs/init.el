@@ -1,4 +1,4 @@
-;;;; init.el --- emacs 初始化 -*- lexical-binding: t -*-
+;;;; init.el --- emacs 初始化
 ;;; Commentary:
 ;; 加载所有功能配置
 
