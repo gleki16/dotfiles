@@ -31,7 +31,6 @@
  inhibit-splash-screen t                ; 禁用启动画面
  initial-scratch-message nil            ; 禁用暂存讯息
  indent-tabs-mode nil                   ; 使用空格代替制表符
- tab-width 4                            ; tab 宽度
  visible-cursor nil                     ; 禁用光标闪烁
  eldoc-echo-area-use-multiline-p nil    ; 不要显示多行 eldoc
  mouse-yank-at-point t                  ; 鼠标粘贴在光标处
