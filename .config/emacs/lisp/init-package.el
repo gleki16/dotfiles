@@ -20,7 +20,5 @@
 
 (require 'use-package)
 
-(require 'init-auto-package-update)     ; 包自动更新
-
 (provide 'init-package)
 ;;; init-package.el ends here
