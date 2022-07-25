@@ -1,7 +1,7 @@
 local options = {
    cursorline = true,           -- 高亮当前行
    expandtab = true,            -- 使用空格代替制表符
-   shiftwidth = 4,              -- tab 时的空格数量
+   shiftwidth = 4,              -- tab 宽度
    ignorecase = true,           -- 搜索忽略大小写
    smartcase = true,            -- 智能匹配搜索大小写
    mouse = 'a',                 -- 启用鼠标
