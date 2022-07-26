@@ -1,3 +1,7 @@
+local function nmap(key, value)
+   vim.api.nvim_set_keymap('n', key, value, {noremap = true, silent = true})
+end
+
 local packs = {
    {
       'folke/which-key.nvim',
@@ -29,7 +33,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- 管理插件
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
       use 'wbthomason/packer.nvim' -- packer 自身
 
       for i, pack in ipairs(packs) do
@@ -39,4 +43,4 @@ return require('packer').startup(function(use)
       if packer_bootstrap then
          require('packer').sync()
       end
-                                end)
+                         end)
