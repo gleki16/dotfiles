@@ -1,6 +1,3 @@
-;;;; init-package.el --- 包管理器
-;;; Commentary:
-
 ;; 添加软件源
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
@@ -20,5 +17,4 @@
 
 (require 'use-package)
 
-(provide 'init-package)
-;;; init-package.el ends here
+(provide 'init-use-package)

@@ -1,21 +1,34 @@
-;;;; init.el --- emacs 初始化
-;;; Commentary:
-;; 加载所有功能配置
-
 ;; 设定源码加载路径
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "lisp/pkg" user-emacs-directory))
 ;; 自定义信息文件位置
 (setq custom-file (locate-user-emacs-file "custom.el"))
 
-;; 加载配置
+;;; 加载配置
+
 (require 'init-version)                 ; 检查版本
 (require 'init-option)                  ; 默认选项
-(require 'init-package)                 ; 包管理器
-(require 'init-theme)                   ; 主题
+(require 'init-use-package)             ; 包管理器
+(require 'init-gruvbox-theme)           ; gruvbox 主题
 (require 'init-keymap)                  ; 按键映射
-(require 'init-completion)              ; 补全
-(require 'init-language)                ; 语言
+
+;; 补全
+(require 'init-undo-tree)               ; 撤销树
+(require 'init-which-key)               ; 显示按键绑定
+(require 'init-selectrum)               ; 命令缓冲区补全
+(require 'init-company)                 ; 插入模式补全
+(require 'init-consult)                 ; 全局搜索补全
+
+;; 语言
+(require 'init-go-translate)            ; 语言翻译
+(require 'init-eglot)                   ; 语言客户端
+(require 'init-flymake)                 ; 语法检查
+(require 'init-org)                     ; org 模式
+(require 'init-quickrun)                ; 快速执行缓冲区
+;; (require 'init-tree-sitter)             ; 语法树
+;; (require 'init-yasnippet)               ; 代码片段 (加载太慢了，也没多大用，干脆不用了)
+
+;; 语言包
+(use-package markdown-mode)
+(use-package lua-mode)
 
 (provide 'init)
-;;; init.el ends here

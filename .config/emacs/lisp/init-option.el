@@ -1,5 +1,4 @@
-;;;; init-option.el --- 默认选项
-;;; Commentary:
+;;; 垃圾收集
 
 ;; 提升垃圾收集阈值，减少垃圾收集的频率来加快启动速度
 (setq gc-cons-threshold most-positive-fixnum)
@@ -49,7 +48,9 @@
 ;;; 图形界面
 
 (when (display-graphic-p)
-  (require 'init-graphic))
+  (blink-cursor-mode -1)                ; 禁用光标闪烁
+  (scroll-bar-mode -1)                  ; 禁用滚动条
+  (tool-bar-mode -1)                    ; 禁用工具栏
+  (add-to-list 'default-frame-alist '(font . "Ubuntu Mono-16")))
 
 (provide 'init-option)
-;;; init-option.el ends here
