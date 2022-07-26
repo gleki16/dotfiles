@@ -7,9 +7,9 @@ end
 
 -- 管理插件
 return require('packer').startup(function(use)
-   use 'wbthomason/packer.nvim'
+      use 'wbthomason/packer.nvim'
 
-   if packer_bootstrap then
-      require('packer').sync()
-   end
-end)
+      if packer_bootstrap then
+         require('packer').sync()
+      end
+                                end)
