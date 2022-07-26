@@ -20,7 +20,7 @@ local function load_plugins()
             use(plugin)
          end
 
-         -- 如果刚下载完 packer，则同步插件
+         -- 如果刚下载完 packer，则同步以上插件
          if packer_bootstrap then
             require('packer').sync()
          end
