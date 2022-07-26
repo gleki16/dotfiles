@@ -3,19 +3,19 @@ local function nmap(key, value)
 end
 
 local packs = {
-   {
+   {                            -- 显示按键绑定
       'folke/which-key.nvim',
       config = function()
          require('which-key').setup{}
       end
    },
-   {
+   {                            -- 匹配括号
       'windwp/nvim-autopairs',
       config = function()
          require('nvim-autopairs').setup{}
       end
    },
-   {
+   {                            -- 主题颜色
       'ellisonleao/gruvbox.nvim',
       config = function()
          vim.o.background = "light"
