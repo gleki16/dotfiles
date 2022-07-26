@@ -1,9 +1,10 @@
 local keymaps = {}
 
 keymaps['n'] = {                -- 普通模式
+   [';'] = ':',
+   ['q'] = ':q<cr>',
    ['<leader>xc'] = ':q<cr>',
    ['<leader>xs'] = ':w<cr>',
-   [';'] = ':',
 }
 
 keymaps['i'] = {                -- 插入模式
