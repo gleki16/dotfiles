@@ -11,6 +11,13 @@ local packs = {
          require('nvim-autopairs').setup{}
       end
    },
+   {
+      'ellisonleao/gruvbox.nvim',
+      config = function()
+         vim.o.background = "light"
+         vim.cmd([[colorscheme gruvbox]])
+      end
+   },
 }
 
 -- 自动安装 packer
