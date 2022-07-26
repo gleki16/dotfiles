@@ -13,8 +13,7 @@ local function load_plugins()
       vim.cmd [[packadd packer.nvim]]
    end
 
-   require('packer').startup(
-      function(use)
+   require('packer').startup(function(use)
          use 'wbthomason/packer.nvim' -- packer 自身
 
          for i, plugin in ipairs(plugins) do
