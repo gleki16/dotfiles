@@ -4,19 +4,6 @@ local plugins = {
    require('init-gruvbox'),        -- gruvbox 主题
 }
 
-local function packer_startup(use)
-   use 'wbthomason/packer.nvim' -- packer 自身
-
-   for i, plugin in ipairs(plugins) do
-      use(plugin)
-   end
-
-   -- 如果刚下载完 packer，则同步插件
-   if packer_bootstrap then
-      require('packer').sync()
-   end
-end
-
 local function load_plugins()
    local fn = vim.fn
    local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -26,7 +13,19 @@ local function load_plugins()
       vim.cmd [[packadd packer.nvim]]
    end
 
-   require('packer').startup(packer_startup(use))
+   require('packer').startup(
+      function(use)
+         use 'wbthomason/packer.nvim' -- packer 自身
+
+         for i, plugin in ipairs(plugins) do
+            use(plugin)
+         end
+
+         -- 如果刚下载完 packer，则同步插件
+         if packer_bootstrap then
+            require('packer').sync()
+         end
+                            end)
 end
 
 load_plugins()
