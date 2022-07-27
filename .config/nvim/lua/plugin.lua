@@ -2,6 +2,9 @@ local plugins = {
    require('init-which-key'),      -- 显示按键绑定
    require('init-nvim-autopairs'), -- 括号自动配对
    require('init-gruvbox'),        -- gruvbox 主题
+   require('init-nvim-lspconfig'), -- 语言客户端
+   require('init-nvim-treesitter'), -- 语法树
+   require('init-nvim-cmp'),        -- 插入模式补全
 }
 
 local function load_plugins()
