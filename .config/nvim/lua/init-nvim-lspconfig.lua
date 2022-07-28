@@ -1,7 +1,12 @@
 return {
    'neovim/nvim-lspconfig',
    config = function()
-      require('lspconfig').bashls.setup{}
-      require('lspconfig').pylsp.setup{}
+      local servers = {
+         'bashls',
+         'pylsp',
+      }
+      for i, server in ipairs(servers) do
+         require('lspconfig')[server].setup{}
+      end
    end
 }
