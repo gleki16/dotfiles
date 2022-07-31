@@ -15,7 +15,7 @@
 (require 'init-undo-tree)               ; 撤销树
 (require 'init-which-key)               ; 显示按键绑定
 (require 'init-selectrum)               ; 命令缓冲区补全
-(require 'init-company)                 ; 插入模式补全
+(require 'init-corfu)                   ; 插入模式补全
 (require 'init-consult)                 ; 全局搜索补全
 
 ;; 语言
@@ -25,7 +25,6 @@
 (require 'init-org)                     ; org 模式
 (require 'init-quickrun)                ; 快速执行缓冲区
 ;; (require 'init-tree-sitter)             ; 语法树
-;; (require 'init-yasnippet)               ; 代码片段 (加载太慢了，也没多大用，干脆不用了)
 
 ;; 语言包
 (use-package markdown-mode)
