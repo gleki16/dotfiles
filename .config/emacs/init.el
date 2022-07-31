@@ -17,6 +17,7 @@
 (require 'init-selectrum)               ; 命令缓冲区补全
 (require 'init-corfu)                   ; 插入模式补全
 (require 'init-consult)                 ; 全局搜索补全
+(require 'init-diff-hl)                 ; git 差异显示
 
 ;; 语言
 (require 'init-go-translate)            ; 语言翻译
