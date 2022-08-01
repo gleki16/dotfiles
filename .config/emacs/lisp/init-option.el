@@ -42,6 +42,10 @@
 ;; 括号自动配对
 (add-hook 'prog-mode-hook 'electric-pair-local-mode)
 (add-hook 'conf-mode-hook 'electric-pair-local-mode)
+;; 删除选择模式
+(add-hook 'after-init-hook 'delete-selection-mode)
+;; 自动同步外部修改
+(add-hook 'after-init-hook 'global-auto-revert-mode)
 ;; 删除尾随空格
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
