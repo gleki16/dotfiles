@@ -9,4 +9,7 @@
   (use-package corfu-terminal
     :config (corfu-terminal-mode 1)))
 
+(use-package corfu-doc
+  :hook (corfu-mode . corfu-doc-mode))
+
 (provide 'init-corfu)
