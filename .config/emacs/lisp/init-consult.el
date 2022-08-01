@@ -1,5 +1,7 @@
 (use-package consult
-  :bind (:map mode-specific-map
+  :bind
+  ([remap switch-to-buffer] . consult-buffer)
+  (:map mode-specific-map
               ("q" . consult-ripgrep)))
 
 (provide 'init-consult)
