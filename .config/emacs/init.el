@@ -12,6 +12,7 @@
 (require 'init-keymap)                  ; 按键映射
 
 ;; 补全
+(require 'init-recentf)                 ; 最近文件
 (require 'init-undo-tree)               ; 撤销树
 (require 'init-which-key)               ; 显示按键绑定
 (require 'init-orderless)               ; 无序补全样式
