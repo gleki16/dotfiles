@@ -14,7 +14,8 @@
 ;; 补全
 (require 'init-undo-tree)               ; 撤销树
 (require 'init-which-key)               ; 显示按键绑定
-(require 'init-selectrum)               ; 命令缓冲区补全
+(require 'init-orderless)               ; 无序补全样式
+(require 'init-vertico)                 ; 命令缓冲区补全
 (require 'init-corfu)                   ; 插入模式补全
 (require 'init-consult)                 ; 全局搜索补全
 (require 'init-diff-hl)                 ; git 差异显示
