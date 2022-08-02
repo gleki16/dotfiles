@@ -10,9 +10,9 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-(setq use-package-always-ensure t
+(setq use-package-always-ensure t       ; 包自动安装
       use-package-expand-minimally t
-      use-package-compute-statistics t
+      use-package-compute-statistics t  ; 收集统计数据
       use-package-enable-imenu-support t)
 
 (require 'use-package)
