@@ -1,4 +1,6 @@
 (use-package corfu
+  :bind (:map corfu-map
+              ([escape] . corfu-quit))  ; esc 关闭补全窗口
   :custom
   (corfu-auto t)                        ; 启用自动补全
   (corfu-auto-delay 0)                  ; 立即显示补全
