@@ -1,4 +1,5 @@
 (use-package tree-sitter
+  ;; :defer t
   :hook ((python-mode
           sh-mode) . tree-sitter-hl-mode)
   :config (global-tree-sitter-mode))
